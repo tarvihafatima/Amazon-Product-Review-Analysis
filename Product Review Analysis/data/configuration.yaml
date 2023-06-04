@@ -1,0 +1,35 @@
+
+#-------------------------------------------------
+#S3 CONFIGURATIONS
+#--------------------------------------------------
+
+source:
+    reviews: https://s3-eu-west-1.amazonaws.com/bigdata-team/job-interview/item_dedup.json.gz
+    products: https://s3-eu-west-1.amazonaws.com/bigdata-team/job-interview/metadata.json.gz
+  
+
+
+#-------------------------------------------------
+#Database CONFIGURATIONS
+#--------------------------------------------------
+
+database:
+    server: localhost
+    port: 5432
+    database: amazonreviews
+    username: postgres
+    password: Minnie4321*
+
+
+#-------------------------------------------------
+#File CONFIGURATIONS
+#--------------------------------------------------
+
+local:
+  directory: D:\Product Review Analysis\dataset
+  products_zipped: D:\Product Review Analysis\dataset\metadata.json.gz
+  reviews_zipped: D:\Product Review Analysis\dataset\item_dedup.json.gz
+  products_filename: metadata.json.gz
+  reviews_filename: item_dedup.json.gz
+  products_json: D:\Product Review Analysis\dataset\metadata.json
+  reviews_json: D:\Product Review Analysis\dataset\item_dedup.json
