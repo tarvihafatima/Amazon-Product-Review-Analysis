@@ -69,7 +69,6 @@ Data accuracy checks validate the correctness of the data values against defined
 ##### For example: 
 
 * Product price should be greater than 0.
-* The length of unix_review_time should fall between 8 and 11 digits.
 * The length of asin should be 10 characters. 
 * Overall rating should fall between the range of 0 and 5.
 
