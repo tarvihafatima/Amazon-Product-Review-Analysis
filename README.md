@@ -106,7 +106,7 @@ git clone https://github.com/tarvihafatima/Twitter-Trends-Analysis
 
 ## Links
 
-* Github Repository: https://github.com/tarvihafatima/Amazon_Product_Review_Analysis/
+* Github Repository: https://github.com/tarvihafatima/Amazon-Product-Review-Analysis/
 * Python Download: https://www.python.org/downloads/
 * Apache Spark Download: https://spark.apache.org/downloads.html
 * Postgres Download: https://www.postgresql.org/download/
