@@ -1,0 +1,30 @@
+
+#-------------------------------------------------
+#File CONFIGURATIONS
+#--------------------------------------------------
+
+sourcing_path;~<YOUR-SOURCE-PATH-FOR-PYTHON-SCRIPT>
+python_path;~<YOUR-ANACONDA-PATH>
+conda_path;~<YOUR-ANACONDA-BAT-PATH>
+
+#-------------------------------------------------
+#Database CONFIGURATIONS
+#--------------------------------------------------
+
+postgres_host;~<YOUR HOST>
+postgres_port;~<YOUR PORT>
+postgres_username;~<YOUR USERNAME>
+postgres_password;~<YOUR PASSWORD>
+postgres_database;~<YOUR DATABASE>
+postgres_warehouse_schema;~<YOUR WAREHOUSE SCHEMA NAME>
+postgres_landing_schema;~<YOUR LANDING SCHEMA NAME>
+
+#-------------------------------------------------
+#Email CONFIGURATIONS
+#--------------------------------------------------
+
+email_to;~<YOUR-EMAIL>
+email_from;~<YOUR-EMAIL>
+email_cc;~<YOUR-EMAIL>
+email_host;~<YOUR-SMTP-HOST>
+email_port;~<YOUR-SMTP-PORT>

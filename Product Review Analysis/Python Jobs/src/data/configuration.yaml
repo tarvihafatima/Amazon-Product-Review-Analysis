@@ -1,0 +1,47 @@
+
+#-------------------------------------------------
+#S3 CONFIGURATIONS
+#--------------------------------------------------
+
+source:
+    products: <YOUR AWS S3 OBJECT URL FOR PRODUCTS>
+    reviews: <YOUR AWS S3 OBJECT URL FOR REVIEWS>  
+
+
+#-------------------------------------------------
+#Database CONFIGURATIONS
+#--------------------------------------------------
+
+database:
+    server: <YOUR HOST>
+    port: <YOUR PORT>
+    database: <YOUR DATABASE>
+    username: <YOUR USERNAME>
+    password: <YOUR PASSWORD>
+
+    landing:
+        schema: <YOUR LANDING SCHEMA NAME>
+        tables:
+            product: <YOUR LANDING PRODUCT TABLE NAME>
+            review: <YOUR LANDING REVIEW TABLE NAME>
+
+    staging:
+        schema: <YOUR STAGING SCHEMA NAME>
+        tables:
+            product: <YOUR STAGING PRODUCT TABLE NAME>
+            review: <YOUR STAGING REVIEW TABLE NAME
+
+
+
+#-------------------------------------------------
+#File CONFIGURATIONS
+#--------------------------------------------------
+
+local:
+  directory: <YOUR MAIN DIRECTORY>
+  products_zipped: <YOUR ZIPPED DIRECTORY FOR PRODUCTS>
+  reviews_zipped: <YOUR ZIPPED DIRECTORY FOR REVIEWS>
+  products_filename: <YOUR PRODUCTS FILENAME>
+  reviews_filename: <YOUR REVIEWS FILENAME>
+  products_json: <YOUR JSON DIRECTORY FOR PRODUCTS>
+  reviews_json: <YOUR JSON DIRECTORY FOR  REVIEWS>
