@@ -1,6 +1,6 @@
 # Amazon Product Review Analysis Data Pipeline
 
-Amazon-Product-Review-Analysis-Data-Pipeline project aims to collect, process, and analyze customer reviews of products 
+Amazon-Product-Review-Analysis-Data-Pipeline project aims to collect, process and analyze customer reviews of products 
 on the Amazon platform. The data pipeline is responsible for collecting and ingesting the raw Review and Product data from 
 Amazon S3 storage. After the data is processed and transformed, it is stored in a data warehouse. The data warehouse serves as a 
 centralized repository that consolidates and organizes the review and product data for further analysis.
@@ -68,10 +68,10 @@ Data accuracy checks validate the correctness of the data values against defined
 
 ##### For example: 
 
--Product price should be greater than 0.
--The length of unix_review_time should fall between 8 and 11 digits.
--The length of asin should be 10 characters. 
--Overall rating should fall between the range of 0 and 5.
+* Product price should be greater than 0.
+* The length of unix_review_time should fall between 8 and 11 digits.
+* The length of asin should be 10 characters. 
+* Overall rating should fall between the range of 0 and 5.
 
 #### Duplicate Detection: 
 Duplicate detection checks identify and handle duplicate or redundant data in the product and reviews dataset.
