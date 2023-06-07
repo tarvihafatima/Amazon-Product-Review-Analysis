@@ -101,22 +101,33 @@ git clone https://github.com/tarvihafatima/Amazon-Product-Review-Analysis
  ```shell
  pip install -r requirements.txt
 ```
+
 * Fill In the Configurations for Talend and Python jobs 
   * Python Config Path: Product Review Analysis\Python Jobs\src\data\configuration.yaml
   * Talend Config Path: Product Review Analysis\Talend Job\Talend_Configs.txt
+  
+  
 * Create Database, Schema and Tables for all Layers
   * Landing: Product Review Analysis\Postgres DB Scripts\Landing Layer\Database Schema and Log Table Creation.sql
   * Staging: Product Review Analysis\Postgres DB Scripts\Staging Layer\Staging DB Tables Creation.sql
   * Warehousing: Product Review Analysis\Postgres DB Scripts\Data Warehousing Layer\Dimensions and Facts Creation.sql
+  
+  
 * Create Stored Procedures for Incremental Load of Dimensions and Fact in Data Warehouse
   * Dimensions: Postgres DB Scripts\Data Warehousing Layer\Dimension Tables Population\
   * Fact: Product Review Analysis\Postgres DB Scripts\Data Warehousing Layer\Fact Tables Population
   * Dimensions and Fact Parent: Product Review Analysis\Postgres DB Scripts\Data Warehousing Layer\Dimensions and Fact Incremental Update - Parent.sql
+
+
 * Create Views for Presentation Layer
   * Product Category Level Analysis: Product Review Analysis\Postgres DB Scripts\Presentation Layer\Product Category Analysis.sql
   * Review Level Analysis: Product Review Analysis\Postgres DB Scripts\Presentation Layer\Review Analysis.sql
   * Product Review Consolidated Analysis: Product Review Analysis\Postgres DB Scripts\Presentation Layer\Product Reviews Consolidated View.sql
+ 
+  
 * Extract Talend Zip File from Product Review Analysis\Talend Job\
+
+
 * Schedule or Run "Product_Review_Workflow_Parent_run.bat" file in Extracted Folder to Start the ETL process.
 
 ## Links
