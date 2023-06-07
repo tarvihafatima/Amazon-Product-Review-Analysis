@@ -3,8 +3,10 @@ import yaml
 import sys
 import os
 
-# Function to Read configuartion.yaml
+
 def get_yaml():
+    
+    # Function to Read configuartion.yaml
     
     try:
         
@@ -45,6 +47,7 @@ def read_local_configurations():
     # read local configrations from configurations.yaml
     
     try:
+        
         cfg = get_yaml()
         local_directories=cfg["local"]
         return local_directories      
@@ -59,6 +62,7 @@ def read_database_configurations():
     # read database configrations from configurations.yaml
     
     try:
+
         cfg = get_yaml()
         database=cfg["database"]
         landing=cfg["database"]['landing']

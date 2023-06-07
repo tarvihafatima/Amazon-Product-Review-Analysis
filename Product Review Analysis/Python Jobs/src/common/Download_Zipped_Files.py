@@ -4,10 +4,9 @@ import requests
 import os
 import threading
 
-
-# Download File by Parts
-
 def download_file_part(url, file_path, start_byte, end_byte):
+
+    # Download File by Parts
 
     try:
         # send HTTP GET request to download the file

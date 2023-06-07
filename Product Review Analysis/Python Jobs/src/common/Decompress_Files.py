@@ -4,9 +4,11 @@ import os
 import gzip
 import io
 
-# Rename FileNames
 
 def rename_file_extension(directory):
+
+    # Rename FileNames
+    
     old_extension = ".gz2"
     new_extension = ".json"
 
