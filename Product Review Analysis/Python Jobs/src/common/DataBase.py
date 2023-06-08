@@ -25,7 +25,7 @@ class Database:
         try:
             df = self.spark.read \
                 .format("jdbc") \
-                .option("url", self.postgres_url + "?currentSchema=" + schema+ "&user=" + self.username + "&password=" + self.password) \
+                .option("url", self.postgres_url + "?currentSchema=" + schema+ "&user=" + self.user + "&password=" + self.password) \
                 .option("dbtable", schema + "." + table_name) \
                 .load()
 
@@ -44,7 +44,7 @@ class Database:
             db_properties = {
             "driver": "org.postgresql.Driver",
             "url": "jdbc:postgresql://" + self.server + ":" + str(self.port) + "/" + self.database,
-            "user": self.username,
+            "user": self.user,
             "password": self.password
             }
 
