@@ -4,7 +4,7 @@ import common.Download_Zipped_Files as Download_Zipped_Files
 import common.Decompress_Files as Decompress_Files
 import common.Load_Raw_Data_into_DB as Load_Raw_Data_into_DB
 import common.Transform_and_Load_Data_into_Staging_DB as Transform_and_Load_Data_into_Staging_DB
-from common.DataBase import DataBase
+from common.DataBase import Database
 
 def main():    
     try:
@@ -45,7 +45,7 @@ def main():
             
         # Get Postgres Connection Properties and URL
 
-        database = DataBase(spark, db_configs['server'], db_configs['port'], db_configs['username'], db_configs['password'] , db_configs['database'])
+        database = Database(spark, db_configs['server'], db_configs['port'], db_configs['username'], db_configs['password'] , db_configs['database'])
         database.set_postgres_url_properties()
 
 
@@ -54,19 +54,19 @@ def main():
 #--------------------------------------------------
 
 
-        # Move Products Data to Landing Stage
+        # # Move Products Data to Landing Stage
 
-        Download_Zipped_Files.download_file_in_threads(source_configs['products'],local_configs['directory'],4) # data fetched by each thread = 4GB
-        Decompress_Files.decompress_file(local_configs['products_zipped'],local_configs['directory'],local_configs['products_filename']) #uncompress product Metadata File
-        json_df = Load_Raw_Data_into_DB.load_products_dataset(spark, local_configs['products_json']) #load product data into PSQL
-        database.store_data(json_df, landing['schema'], landing_tables['review'])
+        # Download_Zipped_Files.download_file_in_threads(source_configs['products'],local_configs['directory'],4) # data fetched by each thread = 4GB
+        # Decompress_Files.decompress_file(local_configs['products_zipped'],local_configs['directory'],local_configs['products_filename']) #uncompress product Metadata File
+        # json_df = Load_Raw_Data_into_DB.load_products_dataset(spark, local_configs['products_json']) #load product data into PSQL
+        # database.store_data(json_df, landing['schema'], landing_tables['review'])
        
-        # Move Reviews Data to Landing Stage      
+        # # Move Reviews Data to Landing Stage      
             
-        Download_Zipped_Files.download_file_in_threads(source_configs['reviews'],local_configs['directory'],4) # data fetched by each thread = 4GBs
-        Decompress_Files.decompress_file(local_configs['reviews_zipped'],local_configs['directory'],local_configs['reviews_filename']) #uncompress review data
-        json_df = Load_Raw_Data_into_DB.load_reviews_dataset(spark, local_configs['reviews_json']) #loads review data into PSQL
-        database.store_data(json_df, landing['schema'], landing_tables['product'])
+        # Download_Zipped_Files.download_file_in_threads(source_configs['reviews'],local_configs['directory'],4) # data fetched by each thread = 4GBs
+        # Decompress_Files.decompress_file(local_configs['reviews_zipped'],local_configs['directory'],local_configs['reviews_filename']) #uncompress review data
+        # json_df = Load_Raw_Data_into_DB.load_reviews_dataset(spark, local_configs['reviews_json']) #loads review data into PSQL
+        # database.store_data(json_df, landing['schema'], landing_tables['product'])
 
     
 #-------------------------------------------------
