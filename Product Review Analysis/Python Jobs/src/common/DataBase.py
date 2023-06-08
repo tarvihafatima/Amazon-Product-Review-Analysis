@@ -43,7 +43,7 @@ class Database:
 
             db_properties = {
             "driver": "org.postgresql.Driver",
-            "url": "jdbc:postgresql://" + self.server + ":" + str(self.port) + "/" + self.database,
+            "url": "jdbc:postgresql://" + self.host + ":" + str(self.port) + "/" + self.database,
             "user": self.user,
             "password": self.password
             }
@@ -52,7 +52,6 @@ class Database:
             self.spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
             self.spark.conf.set("spark.sql.execution.arrow.pyspark.fallback.enabled", "true")
 
-            print(schema + "." + table, db_properties)
             df.write \
                 .option("truncate", "false") \
                 .jdbc(db_properties["url"], schema + "." + table, mode="append", properties=db_properties)
